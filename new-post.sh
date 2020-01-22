@@ -9,15 +9,15 @@ read subtitle
 now=`date +%Y-%m-%d`
 
 
-echo ---
-echo title: $title
-echo subtitle: $subtitle
-echo date: $now
-echo tags: []
-echo ---
-echo
-echo Begenning and preview
-echo
-echo "<!--more-->"
-echo
-echo The rest of the text
+echo "---
+title: $title
+subtitle: $subtitle
+date: $now
+tags: []
+---
+
+Begenning and preview
+
+<!--more-->
+
+The rest of the text" >> ./content/post/$now-$title.md
