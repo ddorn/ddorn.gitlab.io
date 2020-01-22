@@ -1,9 +1,19 @@
-## Front Page Content
+## Disclaimer
 
+Tout ce qui se trouve ici n'engage que moi et sont ma vision de la réalité.
+J'essaie d'être le plus objectif possible et de ne dire que des choses qui
+sont soient clairement mon opinion, soit sont démontrés/soutenues par des
+preuves ou des faits, cependant de noumbreux biais cognitifs se glisseront
+dans mes posts ainsi que des erreurs. Je te prie de ne pas m'en vouloir et
+de m'aider à m'affrachir des mais biais et corriger mes erreurs si tu en
+vois.
+
+Ceci dit, je mettrait tout en oeuvre pour que nous ressortions tous les deux
+grandis de la lecture et de l'écriture de ce site. Enfin j'aimerais bien que
+ce soit le cas.
+
+
+---
 This website is powered by [GitLab Pages](https://about.gitlab.com/features/pages/)
-/ [Hugo](https://gohugo.io) and can be built in under 1 minute.
-Literally. It uses the `beautifulhugo` theme which supports content on your front page.
-Edit `/content/_index.md` to change what appears here. Delete `/content/_index.md`
-if you don't want any content here.
-
-Head over to the [GitLab project](https://gitlab.com/pages/hugo) to get started.
+/ [Hugo](https://gohugo.io) and was built in under 1 minute.
+Literally. Try it ! It's fun and satisfying ;)
