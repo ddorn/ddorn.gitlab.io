@@ -60,6 +60,12 @@ pygmentCodeFences = true
     url = "post"
     weight = 1
 
+
+[[menu.main]]
+    name = "Ressources"
+    url = "page/ressources/"
+    weight = 2
+
 [[menu.main]]
     name = "About"
     url = "page/about/"
