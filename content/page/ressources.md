@@ -1,6 +1,6 @@
 ---
 title: Ressources
-subtitle: Un petite list de contenu qui a changé ma vie
+subtitle: Un petite liste de contenu qui a changé ma vie
 comments: false
 ---
 
