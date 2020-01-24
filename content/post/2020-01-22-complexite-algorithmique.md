@@ -245,9 +245,9 @@ On a donc que la complexité moyenne est dans tous les cas \\(\mathcal{O}( n )\\
 En fait, la complexité meilleur cas n'est pas souvent utile, car on
 peut souvent modifier un peu un algo pour améliorer la complexité
 meilleur cas. Par exemple pour un algo de tri, on pourrait d'abord vérifier
-si la liste est triée et si oui ne rien faire. On aurait donc une complexité
+si la liste est déjà triée et si oui ne rien faire. On aurait donc une complexité
 meilleur cas en \\(\mathcal{O}( n )\\) mais cela ne nous dit pas grand chose
-sur ce que notre algorithme fait quand on le fait trier un liste qui n'est
+sur ce que notre algorithme fait quand on le fait trier une liste qui n'est
 pas déjà triée, ce risque d'arriver souvent.
 
 Une autre chose a remarquer est que la complexité moyenne est un outil très
@@ -257,10 +257,10 @@ bien plus difficile à trouver que la complexité pire cas.
 De plus, si on fait seulement la moyenne du nombre d'opérations pour chaque entrée,
 on considère que les entrées sont uniformément distribuées : elles ont toutes la
 même probabilité d'exister. Cela marche très bien en théorie, mais en pratique
-ce n'est pas forcement le cas. Ainsi à un certain point on veut trier une liste
+ce n'est pas forcement le cas. Si à un certain point on veut trier une liste
 qui contient de la *real world data*, il y a une plus forte probabilité qu'elle
 contienne des gros bouts déjà triés ou presque triés. Certains algorithmes prennent
-cela en compte, comme le [TimSort](https://en.wikipedia.org/wiki/Timsort) l'algorithme
+cela en compte, comme le [TimSort](https://en.wikipedia.org/wiki/Timsort), qui est l'algorithme
 de tri de Python.
 
 Pour la complexité pire cas, une question importante à se poser est « *Quel est le
@@ -316,11 +316,10 @@ spatiale de \\(\mathcal{O}( 1 )\\).
 
 Histoire de bien se fixer les idées voici quelques exemple qui t'aideront
 probablement à mieux comprendre comment trouver la complexité en pratique
-et ce quelle signifie. Les exemples sont tirés d'exercices donnés soit dans
-le cours d'ICC ou d'algo de l'EPFL, pourtant ils ne sont pas bien compliqués.
+et ce quelle signifie.
 
 Pour chacun je te conseille d'essayer de trouver par toi même la complexité
-temporelle pire cas et la complexité spatiale pire cas avant de lire la
+temporelle pire cas et la complexité spatiale avant de lire la
 solution et mes commentaires.
 
 #### Un petit piège pour commencer
@@ -333,7 +332,7 @@ def affiche1():
 ```
 
 Cet algorithme est en \\(\mathcal{O}( 1 )\\) car il prend toujours le même temps
-pour s'exécuter. A chaque fois qu'il est appelle il fait un million de `print`
+pour s'exécuter. A chaque fois qu'il est appelé il fait un million de `print`
 et la boucle `for` s'exécute 1000001 fois. Il est donc en \\(\mathcal{O}( 2000001 )\\)
 mais ça n'est pas différent de \\(\mathcal{O}( 1 )\\), même si la constante est
 très grande.
@@ -348,7 +347,7 @@ def affiche2(n):
 Bien sûr, c'est différent ici et cet algo est en \\(\mathcal{O}( n^2 )\\).
 
 #### Deux façons de calculer une factorielle
-Voici un premier programme qui calcule n factoriel :
+Voici un premier programme qui calcule \\( n \\) factoriel :
 
 ```python
 def factoriel1(n):
@@ -375,7 +374,9 @@ def factoriel2(n):
 Cet algorithme fait un nombre constant d'opérations et en plus s'appelle lui-même.
 Ainsi, a chaque appel récursif, il fait \\(\mathcal{O}( 1 )\\) opération et il
 y a au total \\( n \\) appels a `factoriel2`. Cet algorithme est donc aussi en
-\\(\mathcal{O}( n )\\). La complexité spatiale pire cas est cependant plus complexe,
+\\(\mathcal{O}( n )\\). N'hésite pas à passer un peu de temps pour bien t'en convaincre.
+
+La complexité spatiale pire cas est cependant plus complexe,
 en effet, à chaque fois que `factoriel2` s'appelle lui même, cela ajoute un
 appel de fonction sur le *stack* afin que lorsque `factoriel2(n-1)` à été calculé,
 on puisse *remonter le stack* avec le `return`. Tu peux voir ça en te disant
@@ -411,15 +412,17 @@ si tu veux en savoir plus, tu peux lire l'[article Wikipédia](https://fr.wikipe
 
 Une autre bonne façon des trouver la complexité est de faire un arbre des appels en notant
 le nombre d'opérations sur chaque nœud et ensuite tout additionner pour trouver le nombre
-d'opérations total.
+d'opérations total. C'est une méthode fort sympatique mais je n'ai vraiment pas envie de
+dessiner des arbres pour les inclure dans le post, désolé.
 
 #### Les tris, meilleurs amis de la complexité
 
 Voici un premier algorithme de tri : le *bubble sort*.
 ```python
 def bubblesort(liste):
-    for i in range(len(liste)):
-        for j in range(len(liste) - 1):
+    n = len(liste)
+    for i in range(n):
+        for j in range(n - 1):
             # Si la paire en j, j+1 est dans le mauvais ordre
             if liste[j] > liste[j + 1]
                 # On inverse liste[j] et liste[j + 1]
@@ -434,7 +437,9 @@ Pour la complexité temporelle, on a du \\(\mathcal{O}( 1 )\\) à l'intérieur
 des deux boucles, la boucle sur `j` est donc en \\(\mathcal{O}( n )\\) car elle
 s'exécute \\( n - 1 \\) fois. Comme la boucle interne est répétée \\( n \\) fois,
 le total est en \\(\mathcal{O}( n^2 )\\). On remarquera que la complexité pire cas,
-meilleur cas ou moyenne est la même ici.
+meilleur cas ou moyenne est la même ici. En général, si il y a \\( k \\) boucles
+les unes dans les autres qui s'exécutent toutes \\( \mathcal{O}(n) \\) fois, on aura
+une complexité en \\(\mathcal{O}( n^k )\\).
 
 Et voici un deuxième algorithme de tri : le *tri par insertion*. C'est celui que
 la plupart des gens utilisent pour trier un jeu de cartes (on en prend une de plus
@@ -448,7 +453,7 @@ def insertion_sort(liste):
         # On prend un nouvel element
         x = liste[i]
 
-        # et on décale vers la droite tous les elemenets plus grand que x
+        # et on décale vers la droite tous les éléments plus grand que x
         j = i
         while j > 0 and liste[j - 1] > x:
             liste[j] = liste[j - 1]
@@ -459,14 +464,15 @@ def insertion_sort(liste):
 ```
 Ce tri est aussi un tri *en place*, il modifie directement la liste.
 Quel est le pire cas ? C'est quand la liste est triée dans le mauvais sens.
-En effet, a chaque fois que l'on piocherait une nouvelle carte, c'est la plus
+En effet, à chaque fois que l'on pioche une nouvelle carte, c'est la plus
 petite de celles que l'on a dans la main, et on la compare alors avec toutes
 les autres cartes avant de la mettre au début de la main/liste.
 
 Pour trouver le nombre d'opérations, il faut trouver combien de fois la boucle
 `while` s'exécute dans le pire cas, car le reste est juste en \\(\mathcal{O}( 1 )\\).
-A chaque tour de boucle `for`, le `while` compare `x` avec toutes les valeurs
-avant, et il y en a `i`. On a donc une comparaison puis deux, puis trois etc...
+A chaque tour de boucle `for`, le `while` compare `x` avec la valeur en position
+`i` puis `i-1` etc... Au final il compare donc `x` avec les `i` valeurs précédentes.
+On a donc une comparaison puis deux, puis trois etc...
 Avec un peu de maths (l'argument de Gauss) on peut trouver que
 
 $$
@@ -550,7 +556,7 @@ F(n) =
 \end{cases}
 $$
 
-Un algorithme simple pour les calculer est donc
+Un algorithme pour les calculer est donc
 
 ```python
 def fib(n):
@@ -562,8 +568,8 @@ def fib(n):
 L'algorithme est simple mais pourtant très peu efficace. En effet, à chaque appel,
 il y a deux appels à `fib`. Le nombre de d'appels double donc à chaque fois
 que l'arbre d'appels augmente de profondeur. Ainsi `fib` est en \\(\mathcal{O}( 2^k )\\)
-si \\( k \\) est la profondeur de l'arbre d'appels. L'arbre n'est pas équilibré car les branche
-où il y a des appels avec \\( n-2 \\) se finissent plus tôt mais on peut quand même dire que :
+si \\( k \\) est la profondeur de l'arbre d'appels. L'arbre n'est pas équilibré car les branches
+où il y a des appels à `fib(n-2)` se finissent plus tôt mais on peut quand même dire que :
  - Toutes les feuilles sont à une profondeur d'au moins \\( n/2 \\) donc `fib` est au moins en
      en \\(\mathcal{O}( 2^{n/2} )\\)
  - La profondeur maximale est \\( n \\) donc `fib` est au plus en \\(\mathcal{O}( 2^n )\\).
