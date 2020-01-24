@@ -577,6 +577,23 @@ où il y a des appels à `fib(n-2)` se finissent plus tôt mais on peut quand m�
 Dans les deux cas `fib` a une complexité temporelle et spatiale exponentielle ce que l'on cherche
 généralement à éviter. On aurait bien sûr pu faire mieux mais c'est pas la question ;)
 
+
+### Conclusion
+
+Il existe d'ailleurs d'autres notions de complexité en informatique,
+notamment la **complexité cyclomatique** qui permet d'avoir un aperçu de la
+complexité structurelle d'un programme. Et de très nombreuses définitions de
+la complexité en mathématiques qui permettent de mesurer différents aspects
+d'un objet. Je pense notamment à la **complexité de Kolmogorov** qui est la longueur
+du plus petit programme qui permet de générer quelque chose et permet
+de mesurer à quel point un objet est « générativement simple ».
+
+J'ai peut-être mis beaucoup de détails mais au moins tu comprendras un peu mieux
+ce qu'est cette complexité qui t'intéressait. Si tu as des questions dis moi
+et je les ajouterai volontiers ici !
+
+
+
 ### Voir aussi
 
 - Le problème [P = NP](https://fr.wikipedia.org/wiki/Probl%C3%A8me_P_%3D_NP)
@@ -591,8 +608,11 @@ généralement à éviter. On aurait bien sûr pu faire mieux mais c'est pas la 
 - Les différents [tris](https://fr.wikipedia.org/wiki/Algorithme_de_tri)
     qui sont de très bon exemple pour comprendre les complexités temporelles
     et présentent de nombreuses facettes de l'algorithmique.
-
-
+- La [complexité cyclomatique](https://en.wikipedia.org/wiki/Cyclomatic_complexity) qui est
+    une mesure de la complexité de la structure d'un programme, souvent
+    utilisé pour les tests.
+- La [complexité de Kolmogorov](https://en.wikipedia.org/wiki/Kolmogorov_complexity)
+    est une mesure de la difficulté à décrire un objet.
 ___
 ### Sources
 
