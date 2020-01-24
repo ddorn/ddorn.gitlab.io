@@ -11,7 +11,6 @@ metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 #disqusShortname = "XXX"
-#googleAnalytics = "XXX"
 
 [Params]
   subtitle = "Un peu de tout, c'est à dire des maths, principalement."
@@ -21,8 +20,20 @@ pygmentCodeFences = true
   commit = false
   rss = true
   comments = true
+  useHLJS = false
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
