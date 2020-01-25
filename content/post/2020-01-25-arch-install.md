@@ -76,3 +76,13 @@ And we configure the bootloader
 
     mkinitcpio -P
     refind-install
+
+Make sure that the UUID in `/boot/refind.conf` matches the output of
+`lsblk -f`.
+
+Copy the configuration files from the old to the new system.
+
+
+You're about done !
+
+
