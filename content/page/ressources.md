@@ -5,7 +5,7 @@ comments: false
 ---
 
 Je vais mettre ici toutes les ressources (princibalement web) que je trouve
-exceptionnelle et qui pourraient fortement interesser quiconque.
+exceptionnelles et qui pourraient fortement interesser quiconque.
 
 I will be both in french and english because talking about informatics is way
 easier in english.
@@ -25,6 +25,8 @@ easier in english.
 - [Roguelike tutorial in Rust](https://bfnightly.bracketproductions.com/rustbook/chapter_0.html)
 	: same but in Rust, and also a great way to
 	learn about ECS, which will change you life.
+- [A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/#markup-languages)
+    : everything is in the title.
 
 ## General knowledge
 
@@ -34,6 +36,8 @@ easier in english.
 	There is a [youtube version](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_), pdf and web version.
 - [Wikipedia](https://en.wikipedia.org/wiki/Mandelbrot_set) : really, no one goes there enough.
 - [Complex Analysis](https://complex-analysis.com/) : A visual and interactive introduction to complex analysis.
+- [If the moon where only 1 pixel](https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html) :
+    an accurate scaled version of our solar system
 
 
 ## Software
