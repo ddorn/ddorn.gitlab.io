@@ -9,8 +9,8 @@
         {{ end }}
 
         <div class="posts-list">
-          {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
-          {{ range $pag.Pages }}
+          <!-- {{ $pag := .Paginate (where .Data.Pages "Type" "post") }} -->
+          {{ range .Site.RegularPages }}
             <article class="post-preview">
               <a href="{{ .Permalink }}">
                 <h2 class="post-title">{{ .Title }}</h2>

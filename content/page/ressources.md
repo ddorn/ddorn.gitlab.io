@@ -2,10 +2,11 @@
 title: Ressources
 subtitle: Un petite liste de contenu qui a changé ma vie
 comments: false
+date: 2020-01-21
 ---
 
-Je vais mettre ici toutes les ressources (princibalement web) que je trouve
-exceptionnelles et qui pourraient fortement interesser quiconque.
+Je vais mettre ici toutes les ressources (principalement web) que je trouve
+exceptionnelles et qui pourraient fortement intéresser quiconque.
 
 I will be both in french and english because talking about informatics is way
 easier in english.
@@ -20,7 +21,7 @@ easier in english.
 ## Tutos
 
 - [Roguelike tutorial in Python](http://rogueliketutorials.com/) : a great
-	way to learn python, game devellopement and the mechanisms of roguelikes
+	way to learn python, game development and the mechanisms of roguelikes
 	at the same time.
 - [Roguelike tutorial in Rust](https://bfnightly.bracketproductions.com/rustbook/chapter_0.html)
 	: same but in Rust, and also a great way to
@@ -32,7 +33,7 @@ easier in english.
 
 - [Category theory for programmers](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/) :
 	an online book about *category theory*, haskell and functional programming.
-	It is a great read for both people intrested in mathematics and informatics.
+	It is a great read for both people interested in mathematics and informatics.
 	There is a [youtube version](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_), pdf and web version.
 - [Wikipedia](https://en.wikipedia.org/wiki/Mandelbrot_set) : really, no one goes there enough.
 - [Complex Analysis](https://complex-analysis.com/) : A visual and interactive introduction to complex analysis.
@@ -42,8 +43,8 @@ easier in english.
 
 ## Software
 
-This wil be a list of software that I really like and help me on a daily basis,
-check it out ! Most will be linux things, be don't be afraid of linux, he just
+This will be a list of software that I really like and help me on a daily basis,
+check it out ! Most will be Linux things, be don't be afraid of Linux, he just
 wants to be your friend ! I encourage you to install [Linux Mint](https://linuxmint.com/),
 if you have never used any GNU/Linux operating system. You can install it alongside
 windows of iOS or even on a USB key ! Contact me if you need help ;)
@@ -57,7 +58,7 @@ With no order :
 	 (*tiling window manager* : it places your windows automatically
 	 to take the maximum space).
  - [Firefox](https://www.mozilla.org/en-US/firefox/new/) : web browser that
-	is fast, secure, syncronisation and cares about you and not your data.
+	is fast, secure, synchronised and cares about you and not your data.
  - Clion, Pycharm : Code editor by [jetbrains](https://www.jetbrains.com/), very efficient IDEs for any language.
  - Vim: efficient and versatile file editor. See [VimAwesome](https://vimawesome.com/) for best plugins.
  - [Telegram](https://telegram.org/) : chat service that is secure, free software,

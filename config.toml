@@ -13,7 +13,7 @@ pygmentCodeFences = true
 #disqusShortname = "XXX"
 
 [Params]
-  subtitle = "Un peu de tout, c'est à dire des maths, principalement."
+  subtitle = "Un peu de tout, c'est à dire des maths, de l'info, principalement."
   logo = "lama.png"
   favicon = "lama-trans.png"
   dateFormat = "January 2, 2006"
@@ -54,7 +54,7 @@ pygmentCodeFences = true
   github = "ddorn"
   twitter = "Le_Quanta"
   reddit = "diegodorn"
-  # linkedin = ""
+  linkedin = "diego-dorn-56389a1b2"
   # xing = ""
   # stackoverflow = ""
   # snapchat = ""
