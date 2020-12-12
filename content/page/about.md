@@ -5,7 +5,7 @@ comments: false
 date: 2020-01-20
 ---
 
-Je suis Diego Dorn, un étudiant en deuxième année de bachelor
+Je suis Diego Dorn, un étudiant en troisième année de Bachelor
 de mathématiques à l'EPFL, et je tiens ce blog quand j'ai envie,
 et surtout quand j'ai d'autres choses à faire.
 
@@ -27,7 +27,7 @@ Ce qui m'intéresse dans la vie :
 
 ### Mon parcours
 
-- **2021 - 2022** : Président de [CQFD](https://cqfd.epfl.ch), l'association des étudiants en mathématiques de l'EPFL
+- **2020 - 2021** : Président de [CQFD](https://cqfd.epfl.ch), l'association des étudiant·e·s en mathématiques de l'EPFL
 - **2018 - 2022** : Bachelor de maths à l'[EPFL](https://epfl.ch).
 - **2017 - 2018** : Année sabbatique en Australie (à Melbourne puis Red Cliffs)
 - **2014 - 2017** : Études au lycée Marie Curie de Strasbourg,

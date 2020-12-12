@@ -6,7 +6,7 @@ tags: ["dp", "covid", "motivation"]
 ---
 
 Durant le covid-19, et notamment dans un milieu avec beaucoup de pression comme
-à l'EPFL, la motivation a, pour moi et beaucoup d'autre été une ressource dont
+à l'EPFL, la motivation a, pour moi et beaucoup d'autres, été une ressource dont
 l'offre n'atteignait pas la cheville de la demande. Après avoir longtemps
 essayé d'avoir plus de motivation ou de plus utiliser chaque once de motivation
 (essais qui ont tous bien raté), j'ai finalement trouvé un moyen de sortir la
