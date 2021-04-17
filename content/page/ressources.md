@@ -5,20 +5,19 @@ comments: false
 date: 2020-01-21
 ---
 
-Je vais mettre ici toutes les ressources (principalement web) que je trouve
-exceptionnelles et qui pourraient fortement intéresser quiconque.
-
-I will be both in french and english because talking about informatics is way
-easier in english.
+I keep track here of all the resources (mostly web) that
+I find exceptional and could interest anyone.
 
 <!--more-->
 
-## Couleurs
+## Colors
 
-- [colormind.io](https://colormind.io): un génératueur de palettes (*color scheme*) basé sur de
-	l'apprentissage profond.
+- [colormind.io](https://colormind.io):
+  A palette generator (*color scheme*) based on deep learning
+- [lospec](https://lospec.com/palette-list):
+  a nice database of palettes for pixel-art
 
-## Tutos
+## Tutorials / Online books
 
 - [Roguelike tutorial in Python](http://rogueliketutorials.com/) : a great
 	way to learn python, game development and the mechanisms of roguelikes
@@ -28,6 +27,17 @@ easier in english.
 	learn about ECS, which will change you life.
 - [A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/#markup-languages)
     : everything is in the title.
+- [The book of shaders](https://thebookofshaders.com/): 
+  a gentle step-by-step guide through the abstract and complex universe of Fragment Shaders.
+
+
+## Assets
+
+- [My personal collection of assets on itch.io](https://itch.io/c/710457/nicefree-game-assets):
+  I collect here all the tilesets/sfx/icons/fonts/... 
+  that are free to use and of incredible quality.
+- [OpenGameArt](https://opengameart.org/):
+  a big collection of open 2D/3D/Music/Sound art.
 
 ## General knowledge
 
@@ -50,8 +60,6 @@ if you have never used any GNU/Linux operating system. You can install it alongs
 windows of iOS or even on a USB key ! Contact me if you need help ;)
 
 With no order :
- - [ranger](https://github.com/ranger/ranger) : the best file manager ever, and it
-	 runs inside your terminal !
  - [i3-wm](https://i3wm.org) : a tiling window manager that take some time to get
 	 used to, but will transform the way you use your computer. Caution : once you
 	 use it, you wont be able to use any non-tiling window manager.
@@ -63,3 +71,12 @@ With no order :
  - Vim: efficient and versatile file editor. See [VimAwesome](https://vimawesome.com/) for best plugins.
  - [Telegram](https://telegram.org/) : chat service that is secure, free software,
 	 and with the most features.
+ - [ranger](https://github.com/ranger/ranger) : the best file manager ever, and it
+	 runs inside your terminal !
+
+
+## Others
+
+- [A collection of easing functions](https://www.iquilezles.org/www/articles/functions/functions.htm):
+  by Inigo Quilez, a shader genius.
+
