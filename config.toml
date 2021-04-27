@@ -47,24 +47,25 @@ pygmentCodeFences = true
 
 [Author]
   name = "Diego Dorn"
-  email = "diego-blog@lama-corp.space"
-  # facebook = ""
-  # googleplus = "" # or xxxxxxxxxxxxxxxxxxxxx
+  youtube = "channel/UCN0kVAIU46vvM86CoGtW1Lw" # or channel/channelname
+  itchio = "cozyfractal"
   gitlab = "ddorn"
+  twitter = "CozyFractal"
   github = "ddorn"
-  twitter = "Le_Quanta"
   reddit = "diegodorn"
-  linkedin = "diego-dorn-56389a1b2"
-  # xing = ""
-  # stackoverflow = ""
-  # snapchat = ""
   instagram = "corsica4ever"
-  # youtube = "" # or channel/channelname
+  linkedin = "diego-dorn-56389a1b2"
+  email = "diego-blog@lama-corp.space"
+
   # soundcloud = ""
   # spotify = ""
   # bandcamp = ""
-  # itchio = ""
   # keybase = ""
+  # facebook = ""
+  # googleplus = "" # or xxxxxxxxxxxxxxxxxxxxx
+  # xing = ""
+  # stackoverflow = ""
+  # snapchat = ""
 
 
 [[menu.main]]
@@ -72,10 +73,9 @@ pygmentCodeFences = true
     url = "post"
     weight = 1
 
-
 [[menu.main]]
-    name = "Ressources"
-    url = "page/ressources/"
+    name = "Resources"
+    url = "page/resources/"
     weight = 2
 
 [[menu.main]]

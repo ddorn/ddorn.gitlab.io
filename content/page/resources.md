@@ -1,6 +1,6 @@
 ---
-title: Ressources
-subtitle: Un petite liste de contenu qui a changé ma vie
+title: Resources
+subtitle: A small list of content that changed my life
 comments: false
 date: 2020-01-21
 ---
@@ -79,4 +79,5 @@ With no order :
 
 - [A collection of easing functions](https://www.iquilezles.org/www/articles/functions/functions.htm):
   by Inigo Quilez, a shader genius.
+
 
