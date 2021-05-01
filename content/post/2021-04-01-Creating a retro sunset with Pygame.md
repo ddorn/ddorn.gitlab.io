@@ -3,6 +3,8 @@ title: Creating a retro sunset with Pygame
 subtitle: Or how to decompose the big scene we imagine in tiny pieces.
 date: 2021-03-01
 tags: ["pygame", "gamedev", "info"]
+header:
+  image: "/retro-sunset/full.png"
 ---
 
 One afternoon like many others, I decided to procrastinate, and instead of
@@ -103,15 +105,16 @@ place to find one.
 I used the palette from [starry night](https://quintino-pixels.itch.io/starry-night) because
 I had just discovered this beautiful tileset and liked the palette...
 
-I added the colors when I needed them, with the other constants, and named them for the first thing I used them for (why not ?)
+I added the colors when I needed them, with the other constants, and named them for the first thing I used them for (why not ?).
+I also used `pygame.Color` as it will allow us to mix them easily.
 
 ```python
-SUN_TOP = (255, 218, 69)
-SUN_BOTTOM = (255, 79, 105)
-SKY_TOP = (73, 231, 236)
-SKY_BOTTOM = (171, 31, 101)
-LINES = (255, 79, 105)
-BG_COLOR = (43, 15, 84)
+SUN_TOP = pygame.Color(255, 218, 69)
+SUN_BOTTOM = pygame.Color(255, 79, 105)
+SKY_TOP = pygame.Color(73, 231, 236)
+SKY_BOTTOM = pygame.Color(171, 31, 101)
+LINES = pygame.Color(255, 79, 105)
+BG_COLOR = pygame.Color(43, 15, 84)
 ```
 
 
@@ -165,17 +168,8 @@ it would be boring an uniteresting.
 
 The sky had to be a gradient, so I picked two colors and needed a way to mix them.
 A simple linear interpolation between the two RGB values would be enough,
-so here is the 1-*ish*-liner.
-
-```python
-def mix(color1, color2, t):
-    """Mix two colors. Return color1 when t=0 and color2 when t=1."""
-    return (
-        round((1 - t) * color1[0] + t * color2[0]),
-        round((1 - t) * color1[1] + t * color2[1]),
-        round((1 - t) * color1[2] + t * color2[2]),
-    )
-```
+and it turns out `pygame.Color.lerp` does exactly that!
+This is a very cool function to have around
 
 To draw the sky, I need to draw each band,
 and each band is totally defined by its `y`
@@ -196,7 +190,7 @@ def draw_sky(display, top=SKY_TOP, bottom=SKY_BOTTOM):
     """Draw the sky gradient in the upper half of the display."""
 
     for y in range(0, H // 2, BAND_HEIGHT):
-        color = mix(SKY_TOP, SKY_END, y / H * 2)
+        color = top.lerp(bottom, y / H * 2)
         display.fill(color, (0, y, W, band_height))
 ```
 
@@ -236,7 +230,7 @@ def draw_sun(display, radius=54, top=SUN_TOP, bottom=SUN_BOTTOM):
 
     # Drawing the gradient
     for y in range(0, size[1], BAND_HEIGHT):
-        color = mix(top, bottom, y / size[1])
+        color = top.lerp(bottom, y / size[1])
         pygame.gfxdraw.hline(sun, 0, size[1], y, color)
 
 ```
@@ -422,7 +416,7 @@ closer to the horizon than the previous one.
 
 The last point is that when I made the lines come form the horizon,
 it didn't look good, because of the low resolution, so I decided to
-make them start from `INFINITy` and it was way better.
+make them start from `INFINITY` and it was way better.
 Let's get into the code !
 
 ```python
@@ -502,14 +496,17 @@ of the screen that it should, we'll make them a thousand pixels far away in thos
         p1 = INFINITY + from_polar(1000, angle)
         p2 = INFINITY + from_polar(1000, angle + span)
         points = [INFINITY, p1, p2]
-        pygame.gfxdraw.filled_polygon(display, points, SUN_BOTTOM + (50,))
+
+        # We take a copy of the sun color and add transparency
+        color = pygame.Color(SUN_BOTTOM)
+        color.a = 50
+
+        pygame.gfxdraw.filled_polygon(display, points, color)
 ```
 
 We only need a way too convert between polar coordinates and Cartesian
 and that will be the last function that we write.
-But first notice the `SUN_BOTTOM + (50,)` which is tuple concatenation to add a fourth
-component to our color, transparency. A transparency of 50 does the job well, 
-and pygame handle everything for us: the triangle is way to big, but clipped to
+For the rest, pygame handles everything for us: the triangle is way to big, but clipped to
 the screen correctly, and `gfxdraw` handles the transparency too.
 
 Now for the conversion from polar coordinates, 
@@ -554,24 +551,15 @@ from math import *
 SIZE = (640, 360)
 W, H = SIZE
 
-SUN_TOP = (255, 218, 69)
-SUN_BOTTOM = (255, 79, 105)
-SKY_TOP = (73, 231, 236)
-SKY_BOTTOM = (171, 31, 101)
-LINES = (255, 79, 105)
-BG_COLOR = (43, 15, 84)
+SUN_TOP = pygame.Color(255, 218, 69)
+SUN_BOTTOM = pygame.Color(255, 79, 105)
+SKY_TOP = pygame.Color(73, 231, 236)
+SKY_BOTTOM = pygame.Color(171, 31, 101)
+LINES = pygame.Color(255, 79, 105)
+BG_COLOR = pygame.Color(43, 15, 84)
 
 BAND_HEIGHT = 9
 INFINITY = pygame.Vector2(W / 4, H * 0.46 // BAND_HEIGHT * BAND_HEIGHT)
-
-
-def mix(color1, color2, t):
-    """Mix two colors. Return color1 when t=0 and color2 when t=1."""
-    return (
-        round((1 - t) * color1[0] + t * color2[0]),
-        round((1 - t) * color1[1] + t * color2[1]),
-        round((1 - t) * color1[2] + t * color2[2]),
-    )
 
 
 def chrange(x, input_range, output_range):
@@ -602,7 +590,7 @@ def draw_sky(display, top=SKY_TOP, bottom=SKY_BOTTOM):
     """Draw the sky gradient in the upper half of the display."""
 
     for y in range(0, H // 2, BAND_HEIGHT):
-        color = mix(top, bottom, y / H * 2)
+        color = top.lerp(bottom, y / H * 2)
         display.fill(color, (0, y, W, BAND_HEIGHT))
 
 
@@ -617,7 +605,7 @@ def draw_sun(display, radius=54, top=SUN_TOP, bottom=SUN_BOTTOM):
 
     # Drawing the gradient
     for y in range(0, size[1], BAND_HEIGHT):
-        color = mix(top, bottom, y / size[1])
+        color = top.lerp(bottom, y / size[1])
         gradient.fill(color, (0, y, size[1], BAND_HEIGHT))
 
     # Drawing the shape of the sun on an other surface.
@@ -681,7 +669,11 @@ def draw_sunrays(display, time):
         p1 = INFINITY + from_polar(1000, angle)
         p2 = INFINITY + from_polar(1000, angle + span)
         points = [INFINITY, p1, p2]
-        pygame.gfxdraw.filled_polygon(display, points, SUN_BOTTOM + (50,))
+
+        color = pygame.Color(SUN_BOTTOM)
+        color.a = 50
+
+        pygame.gfxdraw.filled_polygon(display, points, color)
 
 
 def main():
