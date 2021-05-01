@@ -5,6 +5,7 @@ date: 2021-03-01
 tags: ["pygame", "gamedev", "info"]
 share_img: "/retro-sunset/full.png"
 share_img_width: 1920
+share_img_height: 1080
 ---
 
 One afternoon like many others, I decided to procrastinate, and instead of
