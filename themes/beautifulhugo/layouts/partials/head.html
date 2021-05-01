@@ -22,6 +22,9 @@
   <meta property="og:image" content="{{ . | absURL }}" />
   <meta name="twitter:image" content="{{ . | absURL }}" />
 {{- end }}
+{{- with .Params.share_img_width }}
+  <meta property="og:image:width" content="{{ .  }}" />
+{{- end }}
   <meta name="twitter:card" content="summary" />
 {{- with .Site.Author.twitter }}
   <meta name="twitter:site" content="@{{ . }}" />
