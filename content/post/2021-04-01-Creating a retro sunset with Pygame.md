@@ -3,7 +3,8 @@ title: Creating a retro sunset with Pygame
 subtitle: Or how to decompose the big scene we imagine in tiny pieces.
 date: 2021-03-01
 tags: ["pygame", "gamedev", "info"]
-image_preview: "/retro-sunset/full.png"
+images:
+- "/retro-sunset/full.png"
 ---
 
 One afternoon like many others, I decided to procrastinate, and instead of
