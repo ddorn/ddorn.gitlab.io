@@ -1,20 +1,14 @@
 [[social_icons]]
-id = "email"
-url = "mailto:%s"
-title = "Email me"
-icon = "fas fa-envelope"
+id = "youtube"
+url = "https://www.youtube.com/%s"
+title = "Youtube"
+icon = "fab fa-youtube"
 
 [[social_icons]]
-id = "facebook"
-url = "https://www.facebook.com/%s"
-title = "Facebook"
-icon = "fab fa-facebook"
-
-[[social_icons]]
-id = "googleplus"
-url = "https://www.plus.google.com/%s"
-title = "Google+"
-icon = "fab fa-google-plus"
+id = "itchio"
+url = "https://itch.io/profile/%s"
+title = "itch.io"
+icon = "fas fa-gamepad"
 
 [[social_icons]]
 id = "gitlab"
@@ -47,34 +41,16 @@ title = "LinkedIn"
 icon = "fab fa-linkedin"
 
 [[social_icons]]
-id = "xing"
-url = "https://www.xing.com/profile/%s"
-title = "Xing"
-icon = "fab fa-xing"
-
-[[social_icons]]
 id = "stackoverflow"
 url = "https://stackoverflow.com/%s"
 title = "StackOverflow"
 icon = "fab fa-stack-overflow"
 
 [[social_icons]]
-id = "snapchat"
-url = "https://www.snapchat.com/add/%s"
-title = "Snapchat"
-icon = "fab fa-snapchat-ghost"
-
-[[social_icons]]
 id = "instagram"
 url = "https://www.instagram.com/%s"
 title = "Instagram"
 icon = "fab fa-instagram"
-
-[[social_icons]]
-id = "youtube"
-url = "https://www.youtube.com/%s"
-title = "Youtube"
-icon = "fab fa-youtube"
 
 [[social_icons]]
 id = "soundcloud"
@@ -95,12 +71,6 @@ title = "Bandcamp"
 icon = "fab fa-bandcamp"
 
 [[social_icons]]
-id = "itchio"
-url = "https://itch.io/profile/%s"
-title = "itch.io"
-icon = "fas fa-gamepad"
-
-[[social_icons]]
 id = "steam"
 url = "https://steamcommunity.com/id/%s"
 title = "Steam"
@@ -118,4 +88,33 @@ url = "https://www.goodreads.com/%s"
 title = "Goodreads"
 icon = "fab fa-goodreads"
 
+[[social_icons]]
+id = "email"
+url = "mailto:%s"
+title = "Email me"
+icon = "fas fa-envelope"
+
+[[social_icons]]
+id = "facebook"
+url = "https://www.facebook.com/%s"
+title = "Facebook"
+icon = "fab fa-facebook"
+
+[[social_icons]]
+id = "googleplus"
+url = "https://www.plus.google.com/%s"
+title = "Google+"
+icon = "fab fa-google-plus"
+
+[[social_icons]]
+id = "xing"
+url = "https://www.xing.com/profile/%s"
+title = "Xing"
+icon = "fab fa-xing"
+
+[[social_icons]]
+id = "snapchat"
+url = "https://www.snapchat.com/add/%s"
+title = "Snapchat"
+icon = "fab fa-snapchat-ghost"
 
