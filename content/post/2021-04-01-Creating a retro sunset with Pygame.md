@@ -62,6 +62,10 @@ SIZE = (320, 180)
 W, H = SIZE
 
 
+# ---------------------------- #
+#  Rest of the code goes here  #
+# ---------------------------- #
+
 def main():
     """The main loop."""
 
@@ -85,12 +89,11 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 
 
 There are still a few things to note here:
- - I'm import `pygame.gfxdraw` as it is not imported by pygame by default, and allows to draw shapes with transparency.
+ - I'm importing `pygame.gfxdraw` as it is not imported by pygame by default, and allows to draw shapes with transparency.
  - Even if I don't plan to change the `SIZE` of the window, I still define a constant in order to avoid magic numbers in the code. I also define one letter shortcuts for the with and height because we will use them *a lot*.
  - I use `pygame.SCALED` for the display type. This is pygame 2 only, and will scale the window by the biggest integer that it can, otherwise you would have to scale it manually.
  - We have a `frame` counter that will be our only source of time for everything that moves.
@@ -341,7 +344,7 @@ further away than values that are close to \\(\pm\frac{\pi}{2}\\).
 
 To handle this we are going to change the range of our number
 twice, ie map the range \\([0, \text{lines}]\\) to
-\\([-\frac{\pi}{2}, \frac{\pi}{2}]\\), so we define a function for this:
+\\([-\frac{\pi}{2}, \frac{\pi}{2}]\\), so we define a function for this at the top of the file:
 
 ```python
 def chrange(x, input_range, output_range):
@@ -352,8 +355,9 @@ def chrange(x, input_range, output_range):
     return normalised * (output_range[1] - output_range[0]) + output_range[0]
 ```
 
-Now, for each line, we compute its angle
-(in the `draw_vertical_lines` function):
+Now that we tackled this, we can go back to `draw_vertical_lines`
+and for each line, we compute its angle
+
 ```python
     # Vertical lines
     n_lines = 17
